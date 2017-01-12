@@ -15,11 +15,11 @@
 
 -export([init/0]).
 
--spec init() -> ok.
+-spec init() -> map().
 init() ->
   % Make sure application is started before creating metrics
   {ok, _Started} = application:ensure_all_started(folsom),
-  ok.
+  #{}.
 
 -spec new(atom(), any(), map()) -> ok | {error, term()}.
 new(counter, Name, _Config) ->
