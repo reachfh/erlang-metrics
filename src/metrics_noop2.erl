@@ -8,7 +8,7 @@
 
 %% Created by benoitc on 26/06/16.
 
--module(metrics_noop).
+-module(metrics_noop2).
 -author("Benoit Chesneau").
 
 %% API

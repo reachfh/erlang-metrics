@@ -15,7 +15,7 @@
 %% Created by benoitc on 26/06/16.
 
 
--module(metrics_grapherl).
+-module(metrics_grapherl2).
 -author("Benoit Chesneau").
 
 %% API

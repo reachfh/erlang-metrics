@@ -1,8 +1,8 @@
-{application, 'metrics',
+{application, 'metrics2',
  [{description, "A generic interface to different metrics systems in Erlang."},
   {vsn, "2.2.0"},
   {registered, []},
-  {mod, {metrics, []}},
+  {mod, {metrics2, []}},
   {applications,
    [kernel,
     stdlib

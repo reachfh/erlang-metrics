@@ -7,7 +7,7 @@
 
 %% Created by benoitc on 26/06/16.
 
--module(metrics_exometer).
+-module(metrics_exometer2).
 -author("Benoit Chesneau").
 
 %% API

@@ -7,7 +7,7 @@
 
 %% Created by benoitc on 26/06/16.
 
--module(metrics_folsom).
+-module(metrics_folsom2).
 -author("Benoit Chesneau").
 
 %% API

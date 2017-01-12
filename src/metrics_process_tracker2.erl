@@ -6,7 +6,7 @@
 
 %% @doc module to track processes associated to a counter
 
--module(metrics_process_tracker).
+-module(metrics_process_tracker2).
 -behaviour(gen_server).
 
 %% public API

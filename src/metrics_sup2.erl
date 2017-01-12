@@ -1,7 +1,7 @@
 
 %% Created by benoitc on 26/06/16.
 
--module(metrics_sup).
+-module(metrics_sup2).
 -author("Benoit Chesneau").
 
 -behaviour(supervisor).
@@ -29,13 +29,13 @@ start_link() ->
 -spec init(any()) ->
   {ok, {supervisor:sup_flags(), [supervisor:child_spec()]}}.
 init([]) ->
-  Metrics = {metrics,
-    {metrics, start_link, []},
-    permanent, brutal_kill,	worker,[metrics]},
+  Metrics = {metrics2,
+    {metrics2, start_link, []},
+    permanent, brutal_kill,	worker,[metrics2]},
 
-  ProcessTracker = {metrics_process_tracker,
-    {metrics_process_tracker, start_link, []},
-    permanent, brutal_kill,	worker,[metrics_process_tracker]},
+  ProcessTracker = {metrics_process_tracker2,
+    {metrics_process_tracker2, start_link, []},
+    permanent, brutal_kill,	worker,[metrics_process_tracker2]},
   
 
   {ok, {{one_for_one, 4, 3600}, [Metrics, ProcessTracker]}}.

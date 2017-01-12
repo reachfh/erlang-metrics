@@ -5,7 +5,7 @@
 
 %% Created by benoitc on 26/06/16.
 
--module(metrics).
+-module(metrics2).
 -author("Benoit Chesneau").
 -behaviour(gen_server).
 -behaviour(application).
@@ -100,7 +100,7 @@ start_link() ->
 %%%
 -spec start(application:start_type(), any()) -> {ok, pid()}.
 start(_StartType, _StartArgs) ->
-  'metrics_sup':start_link().
+  'metrics_sup2':start_link().
 
 -spec stop(atom()) -> ok.
 stop(_State) ->
@@ -154,7 +154,7 @@ code_change(_OldVsn, State, _Extra) ->
 
 
 metrics_mod() ->
-  Mod = application:get_env(metrics, metrics_mod, metrics_noop),
+  Mod = application:get_env(metrics, metrics_mod, metrics_noop2),
   _ = code:ensure_loaded(Mod),
   case erlang:function_exported(Mod, update, 3) of
     false ->
